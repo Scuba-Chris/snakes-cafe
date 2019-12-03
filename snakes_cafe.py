@@ -40,9 +40,6 @@ def order():
     for i , x in desserts.items():
         if x > 0:
             print(f'You ordered {x} order of {i} ') 
-    for i , x in desserts.items():
-        if x > 0:
-            print(f'You ordered {x} order of {i} ') 
     for i , x in beverages.items():
         if x > 0:
             print(f'You ordered {x} order of {i} ') 
@@ -83,7 +80,6 @@ print('*********************************')
 
 while True:
     enterance_anwser = input('Are you ready to see the menu?')
-    print('before')
     if enterance_anwser == 'yes' or enterance_anwser ==  'y' or enterance_anwser == 'yea' or enterance_anwser ==  'ya':
         menu()
         break
