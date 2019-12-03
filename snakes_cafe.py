@@ -28,6 +28,25 @@ def exit_app():
     print('thank you for coming')
     sys.exit()
 
+def order():
+    print('*'*33)
+    print('your order:')
+    for i , x in appetizers.items():
+        if x > 0:
+            print(f'You ordered {x} order of {i} ') 
+    for i , x in entrees.items():
+        if x > 0:
+            print(f'You ordered {x} order of {i} ') 
+    for i , x in desserts.items():
+        if x > 0:
+            print(f'You ordered {x} order of {i} ') 
+    for i , x in desserts.items():
+        if x > 0:
+            print(f'You ordered {x} order of {i} ') 
+    for i , x in beverages.items():
+        if x > 0:
+            print(f'You ordered {x} order of {i} ') 
+
 def menu():
     print('----------')
     print('appetizers')
@@ -58,6 +77,7 @@ print('*********************************')
 print('** welcome to the Snake Cafe!! **')
 print('** Please see our menu below!! **')
 print('**                             **')
+print('**  done ording, type "done"   **')
 print('** to leave page, type "quit"  **')
 print('*********************************')
 
@@ -78,12 +98,16 @@ while True:
         print(appetizers[anwser], anwser,'has been added to you order!')
     elif anwser in entrees:
         entrees[anwser] += 1
-        print(appetizers[anwser], anwser,'has been added to you order!')
+        print(entrees[anwser], anwser,'has been added to you order!')
     elif anwser in desserts:
         desserts[anwser] += 1
         print(desserts[anwser], anwser,'has been added to you order!')
     elif anwser in beverages:
         beverages[anwser] += 1
         print(beverages[anwser], anwser,'has been added to you order!')
+    elif anwser == 'done':
+        order()
+        break
     else:
         print('Please input choice again')
+
